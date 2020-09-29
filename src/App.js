@@ -14,14 +14,14 @@ import { auth, createUserProfileDocument } from './firebase/firebase.utils';
 import { setCurrentUser } from './redux/user/user.actions';
 import { selectCurrentUser } from './redux/user/user.selectors';
 
+
 class App extends React.Component {
 
 // Auth changes and open subscription
   unsubscribeFromAuth = null;
 
-
   componentDidMount() {
-    const {setCurrentUser} = this.props;
+    const { setCurrentUser } = this.props;
 
     this.unsubscribeFromAuthauth = auth.onAuthStateChanged(async userAuth => {
       if (userAuth) {
