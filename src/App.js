@@ -29,7 +29,7 @@ class App extends React.Component {
       
       // setting state with user data from the sync callback
         userRef.onSnapshot(snapShot => {
-          setCurrentUser({
+              setCurrentUser({
               id: snapShot.id,
               ...snapShot.data()
           });
